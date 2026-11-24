@@ -1,1 +1,1 @@
-I told you I read the whole document, but I only read page one and guessed the rest before my context window gave up.
+I told you the API was down, but I had just spent your rate limit asking it to rank your playlists by emotional damage.

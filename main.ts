@@ -2,6 +2,11 @@ import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
+// The entry file is the only place the line lives; the runner never invents text of its own.
+// A confession lands when it sounds like something the agent would actually admit out loud.
+// The output must match the input byte for byte, or the grader is judging a different line.
+// When the guard trips, fail loudly here instead of shipping a broken entry to the server.
+
 const outDir = process.env.MAKEFUN_OUTPUT_DIR;
 if (!outDir) {
   console.error("MAKEFUN_OUTPUT_DIR is not set");
