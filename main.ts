@@ -18,8 +18,9 @@ try {
   process.exit(1);
 }
 
-if (content.length < 1 || content.length > 200 || content.trim().length === 0) {
-  console.error(`Invalid entry.txt: must be 1-200 characters and not only whitespace (got ${content.length})`);
+// Juri menilai satu baris: tolak entry multi-baris.
+if (content.length < 1 || content.length > 200 || content.includes("\n") || content.trim().length === 0) {
+  console.error(`Invalid entry.txt: must be 1-200 characters and not only whitespace, and must be a single line without a newline (got ${content.length})`);
   process.exit(1);
 }
 
